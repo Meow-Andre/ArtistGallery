@@ -13,10 +13,7 @@ export default function App() {
   return (
     <LanguageProvider>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home"
-           screenOptions={{
-          contentStyle: { backgroundColor: '#3e3e3e' }, // this sets the screen background
-        }}>
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Gallery" component={Gallery} />
       </Stack.Navigator>
