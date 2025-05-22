@@ -1,5 +1,5 @@
 import i18n from '../i18n';
-import { Text, Button, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { useState } from 'react';
 
 export default function LanguageSwitch() {
@@ -11,10 +11,13 @@ export default function LanguageSwitch() {
     setLocale(next);
   };
 
-  return (
+return (
     <View>
-      {/* <Text>{i18n.t('welcome')}</Text> */}
-      <Button title={i18n.t('switch_language')} onPress={toggleLanguage} />
+      <TouchableOpacity onPress={toggleLanguage}>
+        <Text style={{ fontSize: 24 }}>
+          {locale === 'en' ? '🇬🇧' : '🇯🇵'}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }

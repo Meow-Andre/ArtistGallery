@@ -13,10 +13,19 @@ export default function App() {
   return (
     <LanguageProvider>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Gallery" component={Gallery} />
-      </Stack.Navigator>
+  <Stack.Navigator initialRouteName="Home">
+  <Stack.Screen 
+    name="Home" 
+    component={Home} 
+    options={{ headerShown: false }} 
+  />
+  <Stack.Screen 
+    name="Gallery" 
+    component={Gallery} 
+    options={{ headerShown: false }} 
+  />
+</Stack.Navigator>
+
     </NavigationContainer>
     </LanguageProvider>
   );

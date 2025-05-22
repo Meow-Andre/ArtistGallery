@@ -2,38 +2,46 @@ import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useLanguage } from '../components/LanguageContext';
 import LanguageSwitch from '../components/language';
+import Header from '../components/Header';
+
 export default function Home() {
   const { locale } = useLanguage();
 
 return (
+  <View style={styles.screen}>
+    <Header />
+
     <View style={styles.container}>
       {/* Left Pane - Image */}
       <View style={styles.leftPane}>
         <Image source={require('../assets/forest.jpg')} style={styles.image} />
-        <Text style={styles.leftVerticalText}></Text>
       </View>
 
       {/* Right Pane - Content */}
       <View style={styles.rightPane}>
         <Text style={styles.rightVerticalText}>Creative Studio Roche</Text>
         <Text style={styles.author}>by Andre Meow and Danny Takushi</Text>
-
-        <Text style={styles.paragraph}>
-          Great Art and Cat Pictures
-        </Text>
+        <Text style={styles.paragraph}>Great Art and Cat Pictures</Text>
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Concept</Text>
         </TouchableOpacity>
       </View>
     </View>
-  );
+  </View>
+);
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
+  },
+  screen: {
+    flex:1,
+    flexDirection: "column",
+
   },
   leftPane: {
     flex: 1,
