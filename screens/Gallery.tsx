@@ -81,9 +81,9 @@ const artworks = [
   },
 ];
 
-const IMAGE_SIZE = 250;
+const IMAGE_SIZE = 600;
 const MIN_DISTANCE = 400;
-const GRID_COLS = 6; // Number of columns in the grid
+const GRID_COLS = 3; // Number of columns in the grid
 
 function generateScatteredGridPositions(count: number, imageSize: number, minDistance: number, cols: number) {
   const positions: { left: number; top: number }[] = [];
